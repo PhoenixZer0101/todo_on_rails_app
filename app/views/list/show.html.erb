@@ -1,19 +1,10 @@
-<ul>
-  <% @list_desc.each do |todo_desc| %>
-  <h1><%= rand(9001) %></h1>
+<ul> <h1><%= rand(9001) %></h1>
   <h2>Stuff and things</h2>
-  <h3><%= |todo_desc|%></h3>
+ 
+  <% @list_desc.each do |todo_desc| %>
   <li>
     <input type="checkbox"></input>
-    <span>Complete all missed assignments - Physics</span>
-  </li>
-  <li>
-    <input type="checkbox"></input>
-    <span>Study rehtoric section for quiz - Communications</span>
-  </li>
-  <li>
-    <input type="checkbox"></input>
-    <span>Complete lab assignment #4 - AP Computer Science</span>
+    <span><%= |todo_desc| %></span>
   </li>
   <% end %>
 </ul>
